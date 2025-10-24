@@ -275,6 +275,11 @@ body {
   flex-grow: 1;
 }
 
+.bigger-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .big-profile-pic {
   position: relative;
   width: 18.5rem;
