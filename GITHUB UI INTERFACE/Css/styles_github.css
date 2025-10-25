@@ -116,7 +116,7 @@ body {
 }
 
 .octicon {
-  fill: #25292e;
+  fill: #252f2eab;
 }
 
 .co-pilot {
@@ -268,7 +268,15 @@ body {
   flex-basis: 18.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  /* gap: 0.75rem; */
+}
+
+.part-1 > * {
+  margin-bottom: 0.75rem;
+}
+
+.part-1 > .set-status-2 {
+  display: none;
 }
 
 .part-2 {
@@ -805,6 +813,10 @@ body {
     flex-basis: 16rem;
   }
 
+  .section > .container {
+    padding: 0 1.5rem;
+  }
+
   .big-profile-pic {
     width: 16rem;
     height: 16rem;
@@ -869,11 +881,52 @@ body {
 
   .section > .container {
     flex-direction: column;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .bigger-container {
+    flex-direction: row;
+    align-items: center;
   }
 
   .big-profile-pic {
     width: 7.65rem;
     height: 7.65rem;
+  }
+
+  .big-profile-pic > .set-status {
+    display: none;
+  }
+
+  .part-1 > .set-status-2 {
+    display: flex;
+    gap: 0.5rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .smiley-svg-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .smiley-svg-container > svg {
+    fill: #59636e;
+  }
+
+  .set-status-2 > .text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #59636e;
+  }
+
+  .part-2 > .division-1 > .second-section {
+    flex-direction: column;
+  }
+
+  .part-2 > .division-1 > .second-section > * {
+    flex-basis: 6.19rem;
   }
 }
