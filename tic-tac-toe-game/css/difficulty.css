@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* color: #290f1c; */
+  color: #f5f5f5;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+:root {
+  --darkerBlue: #001433;
+  --darkBlue: #002966;
+  --lessDarkBlue: #003d99;
+
+  /* dob - deep ocean blue */
+  --dobDark: #1b3a4b;
+  --dobLessDark: #144552;
+  --dobLesserDark: #0b525b;
+  --dobLesserLight: #065a60;
+}
+
+body {
+  /* background: linear-gradient(#1b3a4b, #144552, #0b525b, #065a60); */
+  /* background: linear-gradient(#001433, #002966, #003d99); */
+  /* background: #1a0231; */
+  /* background: rgb(0, 0, 0); */
+  background: rgb(2, 2, 27);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+  padding: 2em;
+  align-items: center;
+}
+
+.header-container {
+  width: 47vw;
+  /* width: 50rem; */
+  height: 3.3em;
+  /* background: #887070; */
+  background: linear-gradient(#001433, #002966, #003d99);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  box-shadow: 0 0 3px lightblue;
+}
+
+.header-container > .header-text {
+  font-size: 2.1em;
+}
+
+.difficulty-container {
+  width: 40vw;
+  /* width: 45rem; */
+  height: 17em;
+  border-radius: 2em;
+  /* background: #b8b8ff; */
+  /* background: #887070; */
+  background: linear-gradient(#001433, #002966, #003d99);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1.9em;
+  box-shadow: 1px 1px 7px lightblue;
+
+  /* animation */
+  animation: main-container 1s linear;
+}
+
+.difficulty-container > .instructions {
+  align-self: center;
+  font-size: 2em;
+}
+
+.difficulty-modes {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.difficulty-modes > * {
+  width: 85%;
+}
+
+.difficulty-modes > * > a {
+  width: 100%;
+  font-size: 1.4em;
+  /* color: #c7c4c4; */
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  /* background: #47010a; */
+  background: #f5f5f5;
+  padding: 0.4em;
+  border-radius: 1em;
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.difficulty-modes > * > a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@keyframes main-container {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
