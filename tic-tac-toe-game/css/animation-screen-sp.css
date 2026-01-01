@@ -52,7 +52,7 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .main-container > * {
@@ -66,7 +66,6 @@ main {
 .player-1-name {
   animation: player1 3.8s linear;
   animation-fill-mode: forwards;
-  /* animation-delay: 1s; */
 }
 
 .welcome-msg {
@@ -120,4 +119,18 @@ main {
     visibility: hidden;
     opacity: 0;
   }
+}
+
+.skip-btn {
+  display: inline-block;
+  padding: 0.55em;
+  color: #000;
+  background: #f5f5f5;
+  font-size: 1.2em;
+  border-radius: 0.6em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px black;
+  margin-bottom: 0.7em;
 }
