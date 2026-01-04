@@ -279,9 +279,6 @@ body {
   transition: transform 0.8s ease;
 }
 
-.container-2 {
-}
-
 .who-plays-first {
   font-size: 3em;
   /* visibility: hidden; */
