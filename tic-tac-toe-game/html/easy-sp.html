@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +17,21 @@
     />
   </head>
   <body>
+    <div class="ged-container">
+      <div class="game-end-display">
+        <div class="who-won-text">YOU HAVE DEFEATED THE BOT!!!</div>
+        <div class="replay-text">
+          <a href="./easy-sp.html">Click here to play again</a>
+        </div>
+        <div class="new-difficulty">
+          <a href="./difficulty.html">Click here to select a new difficulty </a>
+        </div>
+        <div class="new-game-mode">
+          <a href="./index_ttt.html">Click here to select a new game mode</a>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <header>
         <div class="header-container">
@@ -25,6 +40,10 @@
       </header>
 
       <main>
+        <div class="player-indicator">
+          <span class="one">X</span> : <span class="two">O</span>
+        </div>
+
         <div class="play-area">
           <div class="line h1"></div>
           <div class="line h2"></div>
@@ -59,14 +78,17 @@
           </div>
         </div>
         <div class="result">
-          Bot - <br /> <br>
+          Bot - <br />
+          <br />
           Player -
         </div>
       </section>
 
       <div class="start-btn-container">
-          <a class="start-btn" href='#'>Start</a>
+        <a class="start-btn" href="#">Start</a>
+      </div>
     </div>
+
     <!-- SCRIPTS -->
     <script src="../javascript/easy.js"></script>
     <!-- FONT AWESOME -->

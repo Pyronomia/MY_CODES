@@ -5,6 +5,9 @@ let box = document.querySelectorAll(".box");
 let playArea = document.querySelector(".play-area");
 let result = document.querySelector(".result");
 let startBtn = document.querySelector(".start-btn");
+let playerIndicator = document.querySelector(".player-indicator");
+let oneX = document.querySelector(".one");
+let twoO = document.querySelector(".two");
 
 let box1 = document.querySelector(".box-1");
 let box2 = document.querySelector(".box-2");
@@ -42,40 +45,77 @@ let allBoxes = [...activeBoxes];
 let botText = "O";
 let playerText = "X";
 
-// console.log(activeBoxes);
+// to prevent click glitch
+if (activePlayer === "bot") {
+  for (let i = 0; i < allBoxes.length; i++) {
+    allBoxes[i].style.pointerEvents = "none";
+  }
+}
+
+//To activate the player indicator
+oneX.classList.add("active");
+
+// to prevent glitch by bot
+let glitch = "";
 
 // start button click event
 startBtn.addEventListener("click", function () {
   result.style.display = "none";
   startBtn.style.display = "none";
   playArea.style.visibility = "visible";
+  playerIndicator.style.visibility = "visible";
 
-  if (activePlayer === "bot") {
-    let randomBox = activeBoxes[Math.floor(Math.random() * activeBoxes.length)];
+  function botLogic1() {
+    console.log(glitch);
+    if (activePlayer === "bot" && glitch === "") {
+      let randomBox =
+        activeBoxes[Math.floor(Math.random() * activeBoxes.length)];
 
-    randomBox.classList.add("red");
+      randomBox.classList.add("red");
 
-    randomBox.textContent = "X";
+      randomBox.textContent = "X";
 
-    botText = "X";
-    playerText = "O";
+      botText = "X";
+      playerText = "O";
 
-    let index = activeBoxes.indexOf(randomBox);
-    activeBoxes.splice(index, 1);
+      let index = activeBoxes.indexOf(randomBox);
+      activeBoxes.splice(index, 1);
 
-    console.log(activeBoxes);
+      console.log(activeBoxes);
 
-    console.log(randomBox);
-    activePlayer = "player";
+      console.log(randomBox);
+      activePlayer = "player";
+
+      twoO.classList.add("active");
+      oneX.classList.remove("active");
+
+      //   to reactivate clickability
+      for (let i = 0; i < allBoxes.length; i++) {
+        allBoxes[i].style.pointerEvents = "auto";
+      }
+    }
   }
+
+  setTimeout(botLogic1, 2100);
   console.log(result);
 });
+
+// To stop indicator
+let indiStop = "";
 
 // Game ender logic
 function deactivatePointer() {
   playArea.style.pointerEvents = "none";
+  indiStop = "stop";
+
   for (let i = 0; i < allBoxes.length; i++) {
     allBoxes[i].style.pointerEvents = "none";
+  }
+
+  if (oneX.classList.contains("active")) {
+    oneX.classList.remove("active");
+  } else {
+    twoO.classList.remove("active");
   }
 }
 
@@ -211,47 +251,57 @@ function checkLogic() {
 }
 
 playArea.addEventListener("click", function (e) {
+  if (activePlayer === "bot") return;
+
+  // to prevent glitch by bot
+  glitch = "no-glitch";
+
+  //   Checks for active boxes and assigning a text to a box
+
   console.log("hi");
-  console.log(activeBoxes);
 
-  //   Checks for active boxes
-  if (e.target.matches(".box")) {
-    console.log("hi");
+  let clickedBox = e.target.closest(".box");
 
-    let clickedBox = e.target.closest(".box");
-
-    if (clickedBox.textContent !== "") {
-      alert("Choose a different box");
-    } else {
-      if (playerText === "O") {
-        clickedBox.textContent = "O";
-        clickedBox.classList.add("blue");
-      } else if (playerText === "X") {
-        clickedBox.textContent = "X";
-        clickedBox.classList.add("red");
-      }
+  if (clickedBox.textContent !== "") {
+    alert("Choose a different box");
+  } else {
+    if (playerText === "O") {
+      clickedBox.textContent = "O";
+      clickedBox.classList.add("blue");
+    } else if (playerText === "X") {
+      clickedBox.textContent = "X";
+      clickedBox.classList.add("red");
     }
-
-    console.log(clickedBox);
-    let index = activeBoxes.indexOf(clickedBox);
-    if (index === -1) return;
-    console.log(index);
-
-    activeBoxes.splice(index, 1);
-
-    // console.log(activeBoxes);
   }
+
+  console.log(clickedBox);
+  let index = activeBoxes.indexOf(clickedBox);
+  if (index === -1) return;
+  console.log(index);
+
+  activeBoxes.splice(index, 1);
+
+  console.log(activeBoxes);
 
   for (let i = 0; i < allBoxes.length; i++) {
     allBoxes[i].style.pointerEvents = "none";
   }
 
+  //   Assigning the active element to bot
   activePlayer = "bot";
-  console.log(activePlayer);
 
   if (e.target.matches(".box")) {
     // Checks for a win
     checkLogic();
+  }
+
+  // Logic for active player indicator
+  if ((playerText === "X") & (indiStop === "")) {
+    twoO.classList.add("active");
+    oneX.classList.remove("active");
+  } else if ((playerText === "O") & (indiStop === "")) {
+    oneX.classList.add("active");
+    twoO.classList.remove("active");
   }
 
   function botLogic() {
@@ -270,7 +320,6 @@ playArea.addEventListener("click", function (e) {
       console.log(randomBox);
 
       activePlayer = "player";
-      console.log("hello");
 
       for (let i = 0; i < allBoxes.length; i++) {
         allBoxes[i].style.pointerEvents = "auto";
@@ -297,7 +346,30 @@ playArea.addEventListener("click", function (e) {
       }
     }
   }
-  botLogic();
-  checkLogic();
-  console.log("hello");
+
+  //   Logic for bot indicator
+  function indicatorLogic() {
+    if (indiStop === "") {
+      if (botText === "X") {
+        twoO.classList.add("active");
+        oneX.classList.remove("active");
+        console.log("hello");
+      } else if (botText === "O") {
+        oneX.classList.add("active");
+        twoO.classList.remove("active");
+      }
+    }
+  }
+
+  setTimeout(() => {
+    botLogic();
+    checkLogic();
+    indicatorLogic();
+  }, 2100);
+  //   botLogic();
+  //   checkLogic();
 });
+
+let ged = document.querySelector(".ged-container");
+console.log(ged.parentElement);
+console.log(ged.nextElementSibling);
