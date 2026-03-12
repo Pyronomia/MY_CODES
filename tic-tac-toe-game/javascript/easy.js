@@ -370,6 +370,3 @@ playArea.addEventListener("click", function (e) {
   //   checkLogic();
 });
 
-let ged = document.querySelector(".ged-container");
-console.log(ged.parentElement);
-console.log(ged.nextElementSibling);
