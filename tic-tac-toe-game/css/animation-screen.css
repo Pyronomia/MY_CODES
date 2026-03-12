@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* color: #290f1c; */
+  color: #f5f5f5;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+body {
+  /* background: linear-gradient(#1b3a4b, #144552, #0b525b, #065a60); */
+  /* background: linear-gradient(#001433, #002966, #003d99); */
+  /* background: #1a0231; */
+  /* background: rgb(0, 0, 0); */
+  background: rgb(2, 2, 27);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  flex: 1;
+}
+
+.header-container {
+  width: 47vw;
+  height: 3.3em;
+  /* background: #887070; */
+  background: linear-gradient(#001433, #002966, #003d99);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  box-shadow: 0 0 3px lightblue;
+}
+
+.header-container > .header-text {
+  font-size: 2.1em;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container > * {
+  font-size: 5em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -53%);
+}
+
+.player-1-name {
+  animation: player1 3.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+.player-2-name {
+  visibility: hidden;
+  animation: player2 3.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 3.79s;
+}
+
+.welcome-msg {
+  width: 100%;
+  font-size: 4.8em;
+  visibility: hidden;
+  animation: welcome-msg 3.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 7.55s;
+  text-align: center;
+}
+
+@keyframes player1 {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  37.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  62.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes player2 {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  37.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  62.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes welcome-msg {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  37.9% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  62.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
