@@ -1,6 +1,8 @@
 // Variables
 let mode = localStorage.getItem("mode");
 console.log(mode);
+let gameEndContainer = document.querySelector(".game-end-display");
+let gedContainer = document.querySelector(".ged-container");
 let box = document.querySelectorAll(".box");
 let playArea = document.querySelector(".play-area");
 let result = document.querySelector(".result");
@@ -107,6 +109,10 @@ let indiStop = "";
 function deactivatePointer() {
   playArea.style.pointerEvents = "none";
   indiStop = "stop";
+
+  // Game end display logic 
+  gameEndContainer.classList.add("end")
+  gedContainer.classList.add("end")
 
   for (let i = 0; i < allBoxes.length; i++) {
     allBoxes[i].style.pointerEvents = "none";
