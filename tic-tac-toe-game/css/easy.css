@@ -492,10 +492,14 @@ body {
   left: 50%;
   transform: translate(-50%, -200em);
   background: rgb(16, 16, 182);
-  padding: 1.5em;
+  padding: 1.7em;
   border-radius: 1.5em;
   transition: transform 0.9s ease-out;
   /* background: bl/; */
+}
+
+.game-end-display a {
+  text-decoration-thickness: 0.05em;
 }
 
 .game-end-display.end {

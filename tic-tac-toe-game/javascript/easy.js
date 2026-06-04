@@ -2,6 +2,7 @@
 let mode = localStorage.getItem("mode");
 console.log(mode);
 let gameEndContainer = document.querySelector(".game-end-display");
+let whoWonText = document.querySelector(".who-won-text")
 let gedContainer = document.querySelector(".ged-container");
 let box = document.querySelectorAll(".box");
 let playArea = document.querySelector(".play-area");
@@ -123,6 +124,14 @@ function deactivatePointer() {
   } else {
     twoO.classList.remove("active");
   }
+
+  if (activePlayer == "bot"){
+  whoWonText.textContent = "YOU HAVE DEFEATED THE BOT!!!"
+  } else if(activePlayer == "player") {
+    whoWonText.textContent = "YOU WERE DEFEATED BY THE BOT"
+  }
+
+  console.log(activePlayer)
 }
 
 // Check logic
