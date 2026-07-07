@@ -173,17 +173,17 @@ body {
 
 @media screen and (320px <= width <= 450px) {
   .header-container {
-    width: 67vw;
-    min-width: 18.2rem;
+    width: 80vw;
+    min-width: 19rem;
   }
 
   .difficulty-container {
-    min-width: 16.5rem;
+    min-width: 17.5rem;
     gap: 1.7em;
   }
 
   .difficulty-container > .instructions {
-    font-size: 1.6em;
+    font-size: 1.7em;
   }
 
   .difficulty-modes {
@@ -191,12 +191,12 @@ body {
   }
 
   .difficulty-modes > * > a {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   .difficulty-container {
-    width: 55vw;
-    height: 14em;
-    font-size: 0.68rem;
+    width: 75vw;
+    height: 14.5em;
+    font-size: 0.715rem;
   }
 }
