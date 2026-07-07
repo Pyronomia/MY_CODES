@@ -8,6 +8,21 @@ console.log(localStorage.getItem("mode"));
 easy.addEventListener("click", function (e) {
   if (e.target.matches("a")) {
     e.preventDefault();
-    window.location.href = "../html/easy-sp.html";
+    window.location.href = "../html/sp-mode.html";
+    localStorage.setItem("difficulty", "easy");
+  }
+});
+normal.addEventListener("click", function (e) {
+  if (e.target.matches("a")) {
+    e.preventDefault();
+    window.location.href = "../html/sp-mode.html";
+    localStorage.setItem("difficulty", "normal");
+  }
+});
+hard.addEventListener("click", function (e) {
+  if (e.target.matches("a")) {
+    e.preventDefault();
+    window.location.href = "../html/sp-mode.html";
+    localStorage.setItem("difficulty", "hard");
   }
 });

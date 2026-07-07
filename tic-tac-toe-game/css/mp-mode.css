@@ -34,7 +34,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  /* gap: 6em; */
+  gap: 3vh;
   padding: 2em;
   align-items: center;
   position: relative;
@@ -42,6 +42,7 @@ body {
 
 .header-container {
   width: 47vw;
+  min-width: 38.5rem;
   height: 3.3em;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
@@ -50,7 +51,7 @@ body {
   justify-content: center;
   border-radius: 2em;
   box-shadow: 0 0 3px lightblue;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 
 .header-container > .header-text {
@@ -69,7 +70,7 @@ body {
 .player-indicator {
   font-size: 2.5em;
   text-align: center;
-  margin-bottom: 0.9em;
+  margin-bottom: 11vh;
   visibility: hidden;
 }
 
@@ -387,41 +388,15 @@ body {
   transition: transform 0.8s ease;
 }
 
-.who-plays-first {
-  font-size: 3em;
-  /* visibility: hidden; */
-  width: 47rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  opacity: 0;
-  visibility: hidden;
-  animation: decider 2.2s linear;
-  /* animation-fill-mode: forwards; */
-}
-
-@keyframes decider {
-  30% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 .result {
-  font-size: 3em;
+  font-size: 4em;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -35%);
-  animation: result 3s linear;
+  animation: result 0.7s linear;
   animation-fill-mode: forwards;
   visibility: hidden;
   opacity: 0;
-  animation-delay: 2.2s;
 }
 
 .start-btn {
@@ -435,39 +410,22 @@ body {
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 0 10px black;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   /* display: none; */
-  animation: result 2.2s linear;
+  animation: result 0.7s linear;
   animation-fill-mode: forwards;
   visibility: hidden;
   opacity: 0;
-  animation-delay: 2.2s;
 }
 
 @keyframes result {
-  10% {
-    opacity: 1;
-    visibility: visible;
+  0% {
+    opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
     visibility: visible;
-  }
-}
-
-.spinner {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #ccc;
-  border-top: 4px solid #333;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -509,4 +467,150 @@ body {
 .game-end-display > * {
   font-size: 1.6em;
   margin-bottom: 0.5em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 68rem) {
+  .header-container {
+    width: 47vw;
+    min-width: 27.5rem;
+
+    font-size: 0.8rem;
+  }
+
+  .player-indicator {
+    font-size: 2.19rem;
+  }
+
+  .play-area {
+    font-size: 0.902rem;
+    grid-template-columns: repeat(3, 31.7%);
+    grid-template-rows: repeat(3, 31.7%);
+  }
+
+  .box {
+    font-size: 5.8em;
+    max-height: 6em;
+  }
+
+  .play-area > .box {
+    width: 5.9rem;
+    height: 5.9rem;
+    text-align: center;
+    line-height: 1.1;
+    /* transform: translateX(2px); */
+    /* z-index: ; */
+  }
+
+  .container-2 {
+    font-size: 0.7rem;
+  }
+
+  .who-plays-first {
+    font-size: 2.8em;
+    width: 16em;
+    line-height: 1.5;
+  }
+
+  .spinner {
+    width: 25px;
+    height: 25px;
+  }
+
+  .result {
+    font-size: 2.25em;
+  }
+
+  .start-btn {
+    font-size: 1.1em;
+  }
+
+  .game-end-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8em;
+    width: 35em;
+    height: 14.75em;
+  }
+}
+
+@media screen and (320px <= width <= 700px) {
+  .header-container {
+    width: 57.5vw;
+    min-width: 23rem;
+
+    font-size: 0.65rem;
+  }
+
+  .player-indicator {
+    font-size: 1.9rem;
+  }
+
+  .play-area {
+    font-size: 0.7rem;
+    grid-template-columns: repeat(3, 31.7%);
+    grid-template-rows: repeat(3, 31.7%);
+  }
+
+  .box {
+    font-size: 5.8em;
+    max-height: 6em;
+  }
+
+  .play-area > .box {
+    width: 4.57rem;
+    height: 4.57rem;
+    text-align: center;
+    line-height: 1.05;
+    /* transform: translateX(2px); */
+    /* z-index: ; */
+  }
+
+  .container-2 {
+    font-size: 0.5rem;
+  }
+
+  .who-plays-first {
+    font-size: 3em;
+    width: 11.5em;
+    line-height: 1.5;
+  }
+
+  .spinner {
+    width: 18px;
+    height: 18px;
+  }
+
+  .result {
+    font-size: 2em;
+  }
+
+  .start-btn {
+    font-size: 1.1em;
+  }
+
+  .game-end-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.65em;
+    width: 35em;
+    height: 14.5em;
+  }
+}
+
+@media screen and (320px <= width <= 450px) {
+  .header-container {
+    width: 67vw;
+    min-width: 18.2rem;
+  }
+  .game-end-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.55em;
+    width: 33em;
+    height: 17em;
+  }
 }

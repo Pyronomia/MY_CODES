@@ -27,11 +27,12 @@ body {
 }
 
 header {
-  flex: 0.8;
+  flex: 1;
 }
 
 .header-container {
   width: 47vw;
+  min-width: 38.5rem;
   height: 3.3em;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
@@ -56,26 +57,26 @@ main {
 }
 
 .main-container > * {
-  font-size: 5em;
+  font-size: 4.5em;
   position: absolute;
-  top: -7%;
+  width: 100%;
+  text-align: center;
+  animation: player1 3.8s linear;
+  top: -14%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .player-1-name {
-  animation: player1 3.8s linear;
   animation-fill-mode: forwards;
 }
 
 .welcome-msg {
-  width: 100%;
   font-size: 4.8em;
   visibility: hidden;
   animation: welcome-msg 3.8s linear;
   animation-fill-mode: forwards;
   animation-delay: 3.792s;
-  text-align: center;
 }
 
 @keyframes player1 {
@@ -133,4 +134,52 @@ main {
   text-decoration: none;
   box-shadow: 0 0 10px black;
   margin-bottom: 0.7em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 68rem) {
+  .header-container {
+    width: 47vw;
+    min-width: 27.5rem;
+    font-size: 0.8rem;
+  }
+
+  .main-container > * {
+    font-size: 3.4em;
+  }
+
+  .skip-btn {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (320px <= width <= 700px) {
+  .header-container {
+    width: 57.5vw;
+    min-width: 23rem;
+    font-size: 0.65rem;
+  }
+
+  .main-container > * {
+    font-size: 2.4em;
+  }
+
+  .skip-btn {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (320px <= width <= 450px) {
+  .header-container {
+    width: 67vw;
+    min-width: 18.2rem;
+  }
+
+  .main-container > * {
+    font-size: 1.8em;
+  }
+
+  .skip-btn {
+    font-size: 0.8em;
+  }
 }

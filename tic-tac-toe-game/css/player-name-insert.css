@@ -17,13 +17,14 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 6em;
+  gap: 17.5vh;
   padding: 2em;
   align-items: center;
 }
 
 .header-container {
   width: 47vw;
+  min-width: 38.5rem;
   height: 3.3em;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
@@ -40,6 +41,7 @@ body {
 
 .name-insert-container {
   width: 40vw;
+  min-width: 32.4rem;
   height: 17em;
   border-radius: 2em;
   /* background: #b8b8ff; */
@@ -93,7 +95,7 @@ body {
 
 .link-start-game {
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
   color: black;
   text-decoration: none;
   z-index: 2;
@@ -117,5 +119,78 @@ body {
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 68rem) {
+  .header-container {
+    width: 47vw;
+    min-width: 27.5rem;
+    font-size: 0.8rem;
+  }
+
+  .name-insert-container {
+    width: 40.5vw;
+    min-width: 25rem;
+    font-size: 0.76rem;
+  }
+}
+
+@media screen and (320px <= width <= 700px) {
+  .header-container {
+    width: 57.5vw;
+    min-width: 23rem;
+    font-size: 0.65rem;
+  }
+
+  .name-insert-container {
+    width: 42vw;
+    height: 15.6em;
+    min-width: 20rem;
+    font-size: 0.66rem;
+    padding: 0.9em 1.3em 1.3em 1.3em;
+  }
+
+  .name-insert-container.mp {
+    gap: 1.2em;
+  }
+}
+
+@media screen and (320px <= width <= 450px) {
+  .header-container {
+    width: 67vw;
+    min-width: 18.2rem;
+  }
+
+  .name-insert-container {
+    width: 55vw;
+    min-width: 15rem;
+    height: 15em;
+    font-size: 0.63rem;
+  }
+
+  .name-insert-container.mp {
+    gap: 1.3em;
+  }
+
+  .name-insert-container > .instructions {
+    align-self: center;
+    font-size: 1.8em;
+  }
+
+  .player-1 > label,
+  .player-2 > label {
+    font-size: 1.05em;
+  }
+
+  #player-1,
+  #player-2 {
+    width: 73.5%;
+    font-size: 1em;
+  }
+
+  .link-start-game {
+    font-size: 1.05em;
   }
 }

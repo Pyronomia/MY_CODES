@@ -1,6 +1,8 @@
 // Variables
 let exPlayer1value = localStorage.getItem("Player1");
 let exPlayer2value = localStorage.getItem("Player2");
+let mode = localStorage.getItem("mode");
+console.log(mode);
 
 console.log(exPlayer1value);
 console.log(exPlayer2value);
@@ -17,6 +19,12 @@ if (player2Name == null) {
   player2Name.textContent = exPlayer2value + "...";
 }
 
-welcomeMsg.addEventListener("animationend", function () {
-  window.location.href = "./difficulty.html";
-});
+if (mode == "single") {
+  welcomeMsg.addEventListener("animationend", function () {
+    window.location.href = "./difficulty.html";
+  });
+} else if (mode == "multiplayer") {
+  welcomeMsg.addEventListener("animationend", function () {
+    window.location.href = "./mp-mode.html";
+  });
+}

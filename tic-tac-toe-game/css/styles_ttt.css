@@ -34,13 +34,14 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  gap: 6em;
+  gap: 17.5vh;
   padding: 2em;
   align-items: center;
 }
 
 .header-container {
   width: 47vw;
+  min-width: 38.5rem;
   height: 3.3em;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
@@ -57,6 +58,7 @@ body {
 
 .game-mode-container {
   width: 40vw;
+  min-width: 32.4rem;
   height: 17em;
   border-radius: 2em;
   /* background: #b8b8ff; */
@@ -120,5 +122,75 @@ body {
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 68rem) {
+  .header-container {
+    width: 47vw;
+    min-width: 27.5rem;
+    font-size: 0.8rem;
+  }
+
+  .game-mode-container {
+    width: 40.5vw;
+    min-width: 25rem;
+    font-size: 0.76rem;
+  }
+}
+
+@media screen and (320px <= width <= 700px) {
+  .header-container {
+    width: 57.5vw;
+    min-width: 23rem;
+    font-size: 0.65rem;
+  }
+
+  .game-mode-container {
+    width: 42vw;
+    height: 15.5em;
+    min-width: 20rem;
+    gap: 2em;
+    font-size: 0.66rem;
+  }
+
+  .game-mode-container > .instructions {
+    font-size: 1.8em;
+  }
+
+  .game-modes {
+    gap: 1.8em;
+  }
+
+  .game-modes > * > a {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (320px <= width <= 450px) {
+  .header-container {
+    width: 67vw;
+    min-width: 18.2rem;
+  }
+
+  .game-mode-container {
+    width: 55vw;
+    min-width: 15rem;
+    font-size: 0.63rem;
+    height: 14.3em;
+  }
+
+  .game-mode-container > .instructions {
+    font-size: 1.6em;
+  }
+
+  .game-modes {
+    font-size: 0.8rem;
+    gap: 1.3em;
+  }
+
+  .game-modes > * > a {
+    font-size: 0.9em;
   }
 }
