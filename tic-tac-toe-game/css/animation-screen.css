@@ -15,7 +15,7 @@ body {
   /* background: #1a0231; */
   /* background: rgb(0, 0, 0); */
   background: rgb(2, 2, 27);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
@@ -169,8 +169,8 @@ main {
 @media screen and (max-width: 68rem) {
   .header-container {
     width: 47vw;
-    min-width: 27.5rem;
-    font-size: 0.8rem;
+    min-width: 29rem;
+    font-size: 0.85rem;
   }
 
   .main-container > * {
@@ -185,8 +185,8 @@ main {
 @media screen and (320px <= width <= 700px) {
   .header-container {
     width: 57.5vw;
-    min-width: 23rem;
-    font-size: 0.65rem;
+    min-width: 24.5rem;
+    font-size: 0.75rem;
   }
 
   .main-container > * {
@@ -194,21 +194,21 @@ main {
   }
 
   .skip-btn {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 
 @media screen and (320px <= width <= 450px) {
   .header-container {
-    width: 67vw;
-    min-width: 18.2rem;
+    width: 86vw;
+    min-width: 20.5rem;
   }
 
   .main-container > * {
-    font-size: 1.8em;
+    font-size: 2.2em;
   }
 
   .skip-btn {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }

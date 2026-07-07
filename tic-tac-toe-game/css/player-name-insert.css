@@ -11,7 +11,7 @@
 
 body {
   background: rgb(2, 2, 27);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
@@ -126,7 +126,7 @@ body {
 @media screen and (max-width: 68rem) {
   .header-container {
     width: 47vw;
-    min-width: 27.5rem;
+    min-width: 29rem;
     font-size: 0.8rem;
   }
 
@@ -140,19 +140,20 @@ body {
 @media screen and (320px <= width <= 700px) {
   .header-container {
     width: 57.5vw;
-    min-width: 23rem;
-    font-size: 0.65rem;
+    min-width: 24.5rem;
+    font-size: 0.75rem;
   }
 
   .name-insert-container {
     width: 42vw;
     height: 15.6em;
-    min-width: 20rem;
-    font-size: 0.66rem;
+    min-width: 21.5rem;
+    font-size: 0.73rem;
     padding: 0.9em 1.3em 1.3em 1.3em;
   }
 
   .name-insert-container.mp {
+    font-size: 0.7rem;
     gap: 1.2em;
   }
 }
@@ -160,14 +161,14 @@ body {
 @media screen and (320px <= width <= 450px) {
   .header-container {
     width: 67vw;
-    min-width: 18.2rem;
+    min-width: 20.5rem;
   }
 
   .name-insert-container {
     width: 55vw;
-    min-width: 15rem;
+    min-width: 17.5rem;
     height: 15em;
-    font-size: 0.63rem;
+    font-size: 0.7rem;
   }
 
   .name-insert-container.mp {
@@ -176,12 +177,15 @@ body {
 
   .name-insert-container > .instructions {
     align-self: center;
+    font-size: 1.85em;
+  }
+  .name-insert-container.mp > .instructions {
+    align-self: center;
     font-size: 1.8em;
   }
-
   .player-1 > label,
   .player-2 > label {
-    font-size: 1.05em;
+    font-size: 1.07em;
   }
 
   #player-1,
@@ -191,6 +195,6 @@ body {
   }
 
   .link-start-game {
-    font-size: 1.05em;
+    font-size: 1.07em;
   }
 }

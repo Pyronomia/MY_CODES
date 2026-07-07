@@ -28,7 +28,7 @@ body {
   /* background: #1a0231; */
   /* background: rgb(0, 0, 0); */
   background: rgb(2, 2, 27);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
@@ -165,7 +165,7 @@ body {
   width: 20.45em;
   height: 20.45em;
   /* background: rgb(45, 124, 189); */
-  background: yellow;
+  /* background: yellow; */
   /* box-shadow: 0 0 1px white; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -473,9 +473,9 @@ body {
 @media screen and (max-width: 68rem) {
   .header-container {
     width: 47vw;
-    min-width: 27.5rem;
+    min-width: 29rem;
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .player-indicator {
@@ -538,9 +538,9 @@ body {
 @media screen and (320px <= width <= 700px) {
   .header-container {
     width: 57.5vw;
-    min-width: 23rem;
+    min-width: 24.5rem;
 
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 
   .player-indicator {
@@ -572,7 +572,7 @@ body {
   }
 
   .who-plays-first {
-    font-size: 3em;
+    font-size: 3.2em;
     width: 11.5em;
     line-height: 1.5;
   }
@@ -602,9 +602,10 @@ body {
 
 @media screen and (320px <= width <= 450px) {
   .header-container {
-    width: 67vw;
-    min-width: 18.2rem;
+    width: 86vw;
+    min-width: 20.5rem;
   }
+
   .game-end-display {
     display: flex;
     flex-direction: column;

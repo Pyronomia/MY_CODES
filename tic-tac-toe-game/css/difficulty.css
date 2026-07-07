@@ -27,7 +27,7 @@ body {
   /* background: #1a0231; */
   /* background: rgb(0, 0, 0); */
   background: rgb(2, 2, 27);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
@@ -128,29 +128,21 @@ body {
 @media screen and (max-width: 68rem) {
   .header-container {
     width: 47vw;
-    min-width: 27.5rem;
+    min-width: 29rem;
     font-size: 0.85rem;
   }
 
   .difficulty-container {
     width: 40.5vw;
-    min-width: 23.9rem;
+    min-width: 25rem;
     font-size: 0.86rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .difficulty-container {
-    width: 40.5vw;
-    min-width: 23rem;
-    font-size: 0.82rem;
   }
 }
 
 @media screen and (320px <= width <= 700px) {
   .header-container {
     width: 57.5vw;
-    min-width: 23.5rem;
+    min-width: 24.5rem;
     font-size: 0.75rem;
   }
 
@@ -174,7 +166,7 @@ body {
 @media screen and (320px <= width <= 450px) {
   .header-container {
     width: 86vw;
-    min-width: 19rem;
+    min-width: 20.5rem;
   }
 
   .difficulty-container {
@@ -195,8 +187,8 @@ body {
   }
 
   .difficulty-container {
-    width: 79vw;
+    width: 75vw;
     height: 15em;
-    font-size: 0.74rem;
+    font-size: 0.73rem;
   }
 }
