@@ -151,7 +151,7 @@ body {
   .header-container {
     width: 57.5vw;
     min-width: 23rem;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .difficulty-container {
@@ -159,7 +159,7 @@ body {
     height: 15.5em;
     min-width: 20rem;
 
-    font-size: 0.66rem;
+    font-size: 0.7rem;
   }
 
   .difficulty-container > .instructions {
@@ -178,12 +178,12 @@ body {
   }
 
   .difficulty-container {
-    min-width: 15rem;
+    min-width: 16.5rem;
     gap: 1.7em;
   }
 
   .difficulty-container > .instructions {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 
   .difficulty-modes {
@@ -191,12 +191,12 @@ body {
   }
 
   .difficulty-modes > * > a {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .difficulty-container {
     width: 55vw;
-    height: 13.5em;
-    font-size: 0.66rem;
+    height: 14em;
+    font-size: 0.68rem;
   }
 }
