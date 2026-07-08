@@ -60,6 +60,7 @@ body {
 .game-mode-container {
   width: 40vw;
   min-width: 32.4rem;
+  max-width: 45.29rem;
   height: 17em;
   border-radius: 2em;
   /* background: #b8b8ff; */
