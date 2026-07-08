@@ -33,6 +33,7 @@ header {
 .header-container {
   width: 47vw;
   height: 3.3em;
+  max-width: 54.1rem;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
   display: flex;

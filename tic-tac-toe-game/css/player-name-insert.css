@@ -25,6 +25,7 @@ body {
 .header-container {
   width: 47vw;
   min-width: 38.5rem;
+  max-width: 54.1rem;
   height: 3.3em;
   /* background: #887070; */
   background: linear-gradient(#001433, #002966, #003d99);
@@ -127,13 +128,13 @@ body {
   .header-container {
     width: 47vw;
     min-width: 29rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .name-insert-container {
     width: 40.5vw;
     min-width: 25rem;
-    font-size: 0.76rem;
+    font-size: 0.86rem;
   }
 }
 
@@ -160,7 +161,7 @@ body {
 
 @media screen and (320px <= width <= 450px) {
   .header-container {
-    width: 67vw;
+    width: 86vw;
     min-width: 20.5rem;
   }
 

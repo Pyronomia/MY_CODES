@@ -577,7 +577,13 @@ function minimax(player, depth) {
 }
 
 playArea.addEventListener("click", function (e) {
+  // To prevent the phone from registering a move when its not its turn
+  if (e.cancelable) {
+    e.preventDefault();
+  }
+
   if (activePlayer === "bot") return;
+
   // to prevent glitch by bot
   glitch = "no-glitch";
 
@@ -589,6 +595,7 @@ playArea.addEventListener("click", function (e) {
 
   if (clickedBox.textContent !== "") {
     alert("Choose a different box");
+    return;
   } else {
     if (playerText === "O") {
       clickedBox.textContent = "O";
